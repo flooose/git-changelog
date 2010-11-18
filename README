@@ -1,0 +1,8 @@
+A small and still incomplete changelog utility. It's
+mostly a frontend to VCLog. I wanted something where you
+could easily look at commit messages for a given number
+of days.
+
+On the most fundamental level, the library part of it
+fulfills my needs. The next step is to implement the
+CLI and.
