@@ -1,10 +1,6 @@
 require File.expand_path('../helper.rb', __FILE__)
 
 class TestGitChangelog < Test::Unit::TestCase
-  def test_truth
-    assert true
-  end
-
   def test_modules_and_classes_exist
     assert defined?(GitChangelog)
     assert defined?(GitChangelog::Changelog)
