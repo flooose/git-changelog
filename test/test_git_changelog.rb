@@ -35,7 +35,7 @@ class TestGitChangelog < Test::Unit::TestCase
   end
 
   def test_epoch_returns_date_x_days_ago
-    today = Date.parse("Thu Nov 18 08:50:56 +0100 2010")
+    today = Date.parse(Time.now.to_s)
     days_ago = today-4
     assert_equal days_ago.to_s, @repo1.epoch(4).to_s
   end

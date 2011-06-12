@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module GitChangelog
   class Changelog
     def initialize(repo_path=nil)
