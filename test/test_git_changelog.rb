@@ -41,20 +41,21 @@ class TestGitChangelog < Test::Unit::TestCase
     assert_kind_of VCLog::Change, @repo1.truncate_changes.first
   end
 
-  def test_a_live_repo
-    Dir.chdir(@cwd)
-
-    path = File.expand_path('../../../adva-cms2', __FILE__)
-    assert_equal '/home/chris/work/projects/adva-cms2', path
-
-    Dir.chdir path do
-      repo = Changelog.new()
-      repo.truncate_changes.each { |c| puts "#{c.date}\n\t#{c.message}" }
-    end
-  end
+# WHY TEST ON A LIVE PROJECT. THIS IS COMPLETELY BRITTLE!
+#  def test_a_live_repo
+#    Dir.chdir(@cwd)
+#
+#    path = File.expand_path('../../../adva-cms2', __FILE__)
+#    assert_equal '/home/chris/work/projects/adva-cms2', path
+#
+#    Dir.chdir path do
+#      repo = Changelog.new()
+#      repo.truncate_changes.each { |c| puts "#{c.date}\n\t#{c.message}" }
+#    end
+#  end
 
   protected
-    
+
     def klass
       GitChangelog::Changelog
     end
